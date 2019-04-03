@@ -1,0 +1,357 @@
+
+    
+<!doctype html>
+<meta charset=utf8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href='../styles.css'>
+<script defer src='../script.js'></script>
+<title>Log</title>
+<body>
+<script>window.relativeToRoot=".."</script>
+<script defer src="../block-script.js"></script>
+<div id='error-message'>
+  ⚠️ Oops! This page doesn't appear to define a <span>type</span> called <code>_</code>.
+</div>
+
+    <script>window.shouldCheckHashes=true</script>
+    <div class='container'>
+    
+    <div class='sidebar-wrapper'>
+    <div class='sidebar-expander'>Show navigation</div>
+    <div class='sidebar'>
+      <a href="../search.html" style="display: block; padding: 0 8px;">Search</a>
+      
+      <div class='docs-listing'><a href="../index.html">Home</a></div>
+      <div class='toc-header'>Page Contents</div>
+      <div class='table-of-contents'>
+      <a href="#Log" class='level-1 header'>Log</a>
+<a href="#module-SerializeError" class='level-2 module'>SerializeError</a>
+<a href="#value-SerializeError.serializeError" class='level-3 value'>serializeError</a>
+<a href="#value-SerializeError.go" class='level-3 value'>go</a>
+<a href="#module-Pino" class='level-2 module'>Pino</a>
+<a href="#type-Pino.instance" class='level-3 type'>instance</a>
+<a href="#value-Pino.make" class='level-3 value'>make</a>
+<a href="#value-Pino.trace" class='level-3 value'>trace</a>
+<a href="#value-Pino.trace2" class='level-3 value'>trace2</a>
+<a href="#value-Pino.trace3" class='level-3 value'>trace3</a>
+<a href="#value-Pino.trace4" class='level-3 value'>trace4</a>
+<a href="#value-Pino.trace5" class='level-3 value'>trace5</a>
+<a href="#value-Pino.debug" class='level-3 value'>debug</a>
+<a href="#value-Pino.debug2" class='level-3 value'>debug2</a>
+<a href="#value-Pino.debug3" class='level-3 value'>debug3</a>
+<a href="#value-Pino.debug4" class='level-3 value'>debug4</a>
+<a href="#value-Pino.debug5" class='level-3 value'>debug5</a>
+<a href="#value-Pino.info" class='level-3 value'>info</a>
+<a href="#value-Pino.info2" class='level-3 value'>info2</a>
+<a href="#value-Pino.info3" class='level-3 value'>info3</a>
+<a href="#value-Pino.info4" class='level-3 value'>info4</a>
+<a href="#value-Pino.info5" class='level-3 value'>info5</a>
+<a href="#value-Pino.warn" class='level-3 value'>warn</a>
+<a href="#value-Pino.warn2" class='level-3 value'>warn2</a>
+<a href="#value-Pino.warn3" class='level-3 value'>warn3</a>
+<a href="#value-Pino.warn4" class='level-3 value'>warn4</a>
+<a href="#value-Pino.warn5" class='level-3 value'>warn5</a>
+<a href="#value-Pino.error" class='level-3 value'>error</a>
+<a href="#value-Pino.error2" class='level-3 value'>error2</a>
+<a href="#value-Pino.error3" class='level-3 value'>error3</a>
+<a href="#value-Pino.error4" class='level-3 value'>error4</a>
+<a href="#value-Pino.error5" class='level-3 value'>error5</a>
+<a href="#value-defaultOpts" class='level-2 value'>defaultOpts</a>
+<a href="#value-instance" class='level-2 value'>instance</a>
+<a href="#value-trace" class='level-2 value'>trace</a>
+<a href="#value-trace2" class='level-2 value'>trace2</a>
+<a href="#value-trace3" class='level-2 value'>trace3</a>
+<a href="#value-trace4" class='level-2 value'>trace4</a>
+<a href="#value-trace5" class='level-2 value'>trace5</a>
+<a href="#value-debug" class='level-2 value'>debug</a>
+<a href="#value-debug2" class='level-2 value'>debug2</a>
+<a href="#value-debug3" class='level-2 value'>debug3</a>
+<a href="#value-debug4" class='level-2 value'>debug4</a>
+<a href="#value-debug5" class='level-2 value'>debug5</a>
+<a href="#value-info" class='level-2 value'>info</a>
+<a href="#value-info2" class='level-2 value'>info2</a>
+<a href="#value-info3" class='level-2 value'>info3</a>
+<a href="#value-info4" class='level-2 value'>info4</a>
+<a href="#value-info5" class='level-2 value'>info5</a>
+<a href="#value-warn" class='level-2 value'>warn</a>
+<a href="#value-warn2" class='level-2 value'>warn2</a>
+<a href="#value-warn3" class='level-2 value'>warn3</a>
+<a href="#value-warn4" class='level-2 value'>warn4</a>
+<a href="#value-warn5" class='level-2 value'>warn5</a>
+<a href="#value-error" class='level-2 value'>error</a>
+<a href="#value-error2" class='level-2 value'>error2</a>
+<a href="#value-error3" class='level-2 value'>error3</a>
+<a href="#value-error4" class='level-2 value'>error4</a>
+<a href="#value-error5" class='level-2 value'>error5</a>
+      </div>
+      <div class='project-title'>Package modules</div><div class='project-listing'><a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a>
+<a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a></div>
+    </div>
+    </div>
+  
+    <div class='main'>
+    
+    <a href="#Log" id="Log"><h1>Log</h1></a>
+
+<p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item module'>module <a href="#module-SerializeError" id="module-SerializeError">SerializeError</a></h4><div class='body module-body'><p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item'>let <a href="#value-SerializeError.serializeError" id="value-SerializeError.serializeError">serializeError</a>: 'a => Js.Json.t</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-SerializeError.go" id="value-SerializeError.go">go</a>: 'a => Js.Json.t</h4>
+
+<div class='body body-empty'></div></div>
+</div></div>
+
+<div class='doc-item'><h4 class='item module'>module <a href="#module-Pino" id="module-Pino">Pino</a></h4><div class='body module-body'><p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item'>type <a href="#type-Pino.instance" id="type-Pino.instance">instance</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item module'>include </h4><div class='body module-body include-body'><div class='doc-item'><h4 class='item'>let <a href="#value-Pino.make" id="value-Pino.make">make</a>: Js.t('a) => <a href="#type-Pino.instance">instance</a></h4>
+
+<div class='body body-empty'></div></div>
+</div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.trace" id="value-Pino.trace">trace</a>: (<a href="#type-Pino.instance">instance</a>, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.trace2" id="value-Pino.trace2">trace2</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.trace3" id="value-Pino.trace3">trace3</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.trace4" id="value-Pino.trace4">trace4</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.trace5" id="value-Pino.trace5">trace5</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd, 'e) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.debug" id="value-Pino.debug">debug</a>: (<a href="#type-Pino.instance">instance</a>, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.debug2" id="value-Pino.debug2">debug2</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.debug3" id="value-Pino.debug3">debug3</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.debug4" id="value-Pino.debug4">debug4</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.debug5" id="value-Pino.debug5">debug5</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd, 'e) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.info" id="value-Pino.info">info</a>: (<a href="#type-Pino.instance">instance</a>, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.info2" id="value-Pino.info2">info2</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.info3" id="value-Pino.info3">info3</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.info4" id="value-Pino.info4">info4</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.info5" id="value-Pino.info5">info5</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd, 'e) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.warn" id="value-Pino.warn">warn</a>: (<a href="#type-Pino.instance">instance</a>, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.warn2" id="value-Pino.warn2">warn2</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.warn3" id="value-Pino.warn3">warn3</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.warn4" id="value-Pino.warn4">warn4</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.warn5" id="value-Pino.warn5">warn5</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd, 'e) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.error" id="value-Pino.error">error</a>: (<a href="#type-Pino.instance">instance</a>, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.error2" id="value-Pino.error2">error2</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.error3" id="value-Pino.error3">error3</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.error4" id="value-Pino.error4">error4</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Pino.error5" id="value-Pino.error5">error5</a>: (<a href="#type-Pino.instance">instance</a>, 'a, 'b, 'c, 'd, 'e) => unit</h4>
+
+<div class='body body-empty'></div></div>
+</div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-defaultOpts" id="value-defaultOpts">defaultOpts</a>: Js.t(
+  &lt; level : string; redact : string array; useLevelLabels : bool &gt;
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-instance" id="value-instance">instance</a>: Pervasives.ref(<a href="#type-Pino.instance" title="Pino.instance">instance</a>)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-trace" id="value-trace">trace</a>: 'a => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-trace2" id="value-trace2">trace2</a>: ('a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-trace3" id="value-trace3">trace3</a>: ('a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-trace4" id="value-trace4">trace4</a>: ('a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-trace5" id="value-trace5">trace5</a>: ('a, 'a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-debug" id="value-debug">debug</a>: 'a => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-debug2" id="value-debug2">debug2</a>: ('a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-debug3" id="value-debug3">debug3</a>: ('a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-debug4" id="value-debug4">debug4</a>: ('a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-debug5" id="value-debug5">debug5</a>: ('a, 'a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-info" id="value-info">info</a>: 'a => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-info2" id="value-info2">info2</a>: ('a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-info3" id="value-info3">info3</a>: ('a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-info4" id="value-info4">info4</a>: ('a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-info5" id="value-info5">info5</a>: ('a, 'a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-warn" id="value-warn">warn</a>: 'a => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-warn2" id="value-warn2">warn2</a>: ('a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-warn3" id="value-warn3">warn3</a>: ('a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-warn4" id="value-warn4">warn4</a>: ('a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-warn5" id="value-warn5">warn5</a>: ('a, 'a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-error" id="value-error">error</a>: 'a => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-error2" id="value-error2">error2</a>: ('a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-error3" id="value-error3">error3</a>: ('a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-error4" id="value-error4">error4</a>: ('a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-error5" id="value-error5">error5</a>: ('a, 'a, 'a, 'a, 'a) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+    </div>
+    <div class='right-blank'></div>
+    </div>
+  

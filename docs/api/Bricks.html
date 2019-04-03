@@ -1,0 +1,429 @@
+
+    
+<!doctype html>
+<meta charset=utf8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href='../styles.css'>
+<script defer src='../script.js'></script>
+<title>Bricks</title>
+<body>
+<script>window.relativeToRoot=".."</script>
+<script defer src="../block-script.js"></script>
+<div id='error-message'>
+  ⚠️ Oops! This page doesn't appear to define a <span>type</span> called <code>_</code>.
+</div>
+
+    <script>window.shouldCheckHashes=true</script>
+    <div class='container'>
+    
+    <div class='sidebar-wrapper'>
+    <div class='sidebar-expander'>Show navigation</div>
+    <div class='sidebar'>
+      <a href="../search.html" style="display: block; padding: 0 8px;">Search</a>
+      
+      <div class='docs-listing'><a href="../index.html">Home</a></div>
+      <div class='toc-header'>Page Contents</div>
+      <div class='table-of-contents'>
+      <a href="#Bricks" class='level-1 header'>Bricks</a>
+<a href="#type-builder" class='level-2 type'>builder</a>
+<a href="#type-fragment" class='level-2 type'>fragment</a>
+<a href="#value-omitBy" class='level-2 value'>omitBy</a>
+<a href="#value-omitByJson" class='level-2 value'>omitByJson</a>
+<a href="#value-sql" class='level-2 value'>sql</a>
+<a href="#value-sqlWithValues" class='level-2 value'>sqlWithValues</a>
+<a href="#type-whereExpr" class='level-2 type'>whereExpr</a>
+<a href="#value-and_" class='level-2 value'>and_</a>
+<a href="#value-or_" class='level-2 value'>or_</a>
+<a href="#value-not" class='level-2 value'>not</a>
+<a href="#value-eq" class='level-2 value'>eq</a>
+<a href="#value-notEq" class='level-2 value'>notEq</a>
+<a href="#value-lt" class='level-2 value'>lt</a>
+<a href="#value-lte" class='level-2 value'>lte</a>
+<a href="#value-gt" class='level-2 value'>gt</a>
+<a href="#value-gte" class='level-2 value'>gte</a>
+<a href="#value-between" class='level-2 value'>between</a>
+<a href="#value-isNull" class='level-2 value'>isNull</a>
+<a href="#value-isNotNull" class='level-2 value'>isNotNull</a>
+<a href="#value-like" class='level-2 value'>like</a>
+<a href="#value-exists" class='level-2 value'>exists</a>
+<a href="#value-in_" class='level-2 value'>in_</a>
+<a href="#value-isNot" class='level-2 value'>isNot</a>
+<a href="#type-insertBuilder" class='level-2 type'>insertBuilder</a>
+<a href="#value-insertInto" class='level-2 value'>insertInto</a>
+<a href="#value-values" class='level-2 value'>values</a>
+<a href="#value-valuesJson" class='level-2 value'>valuesJson</a>
+<a href="#value-value" class='level-2 value'>value</a>
+<a href="#value-valueJson" class='level-2 value'>valueJson</a>
+<a href="#value-jsonValue" class='level-2 value'>jsonValue</a>
+<a href="#value-jsonValues" class='level-2 value'>jsonValues</a>
+<a href="#value-update" class='level-2 value'>update</a>
+<a href="#value-updateJson" class='level-2 value'>updateJson</a>
+<a href="#value-delete" class='level-2 value'>delete</a>
+<a href="#value-select" class='level-2 value'>select</a>
+<a href="#value-distinct" class='level-2 value'>distinct</a>
+<a href="#value-andSelect" class='level-2 value'>andSelect</a>
+<a href="#value-offset" class='level-2 value'>offset</a>
+<a href="#value-limit" class='level-2 value'>limit</a>
+<a href="#value-into" class='level-2 value'>into</a>
+<a href="#value-intoTemp" class='level-2 value'>intoTemp</a>
+<a href="#value-from" class='level-2 value'>from</a>
+<a href="#value-join" class='level-2 value'>join</a>
+<a href="#value-leftJoin" class='level-2 value'>leftJoin</a>
+<a href="#value-rightJoin" class='level-2 value'>rightJoin</a>
+<a href="#value-fullJoin" class='level-2 value'>fullJoin</a>
+<a href="#value-crossJoin" class='level-2 value'>crossJoin</a>
+<a href="#value-on" class='level-2 value'>on</a>
+<a href="#value-whereEq" class='level-2 value'>whereEq</a>
+<a href="#value-whereAll" class='level-2 value'>whereAll</a>
+<a href="#value-where" class='level-2 value'>where</a>
+<a href="#value-groupByOne" class='level-2 value'>groupByOne</a>
+<a href="#value-groupBy" class='level-2 value'>groupBy</a>
+<a href="#value-having" class='level-2 value'>having</a>
+<a href="#value-orderByOne" class='level-2 value'>orderByOne</a>
+<a href="#value-orderBy" class='level-2 value'>orderBy</a>
+<a href="#value-forUpdate" class='level-2 value'>forUpdate</a>
+<a href="#value-set" class='level-2 value'>set</a>
+<a href="#value-whereOpt" class='level-2 value'>whereOpt</a>
+<a href="#type-onConflictBuilder" class='level-2 type'>onConflictBuilder</a>
+<a href="#value-onConflict2" class='level-2 value'>onConflict2</a>
+<a href="#value-onConflict" class='level-2 value'>onConflict</a>
+<a href="#value-doUpdate" class='level-2 value'>doUpdate</a>
+<a href="#value-doNothing" class='level-2 value'>doNothing</a>
+<a href="#value-doUpdateOne" class='level-2 value'>doUpdateOne</a>
+<a href="#value-returning" class='level-2 value'>returning</a>
+<a href="#value-toPayload" class='level-2 value'>toPayload</a>
+<a href="#value-toString" class='level-2 value'>toString</a>
+      </div>
+      <div class='project-title'>Package modules</div><div class='project-listing'><a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a>
+<a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a></div>
+    </div>
+    </div>
+  
+    <div class='main'>
+    
+    <a href="#Bricks" id="Bricks"><h1>Bricks</h1></a>
+
+<p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item'>type <a href="#type-builder" id="type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-fragment" id="type-fragment">fragment</a> = Js.t(
+  &lt; str : string; vals : Pg.values &gt;
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-omitBy" id="value-omitBy">omitBy</a>: (Js.t('a), 'b => bool) => Js.t('c)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-omitByJson" id="value-omitByJson">omitByJson</a>: (Js.Json.t, 'b => bool) => Js.Json.t</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-sql" id="value-sql">sql</a>: string => <a href="#type-fragment">fragment</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-sqlWithValues" id="value-sqlWithValues">sqlWithValues</a>: (
+  ~text: string,
+  ~values: [ `Eight of 'a0 * 'b0 * 'c0 * 'd0 * 'e0 * 'f0 * 'g0 * 'h0
+| `Five of 'a0 * 'b0 * 'c0 * 'd0 * 'e0
+| `Four of 'a0 * 'b0 * 'c0 * 'd0
+| `Nine of 'a0 * 'b0 * 'c0 * 'd0 * 'e0 * 'f0 * 'g0 * 'h0 * 'i0
+| `One of 'a0
+| `Seven of 'a0 * 'b0 * 'c0 * 'd0 * 'e0 * 'f0 * 'g0
+| `Six of 'a0 * 'b0 * 'c0 * 'd0 * 'e0 * 'f0
+| `Three of 'a0 * 'b0 * 'c0
+| `Two of 'a0 * 'b0 ]
+) => <a href="#type-fragment">fragment</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-whereExpr" id="type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-and_" id="value-and_">and_</a>: array(<a href="#type-whereExpr">whereExpr</a>) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-or_" id="value-or_">or_</a>: array(<a href="#type-whereExpr">whereExpr</a>) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-not" id="value-not">not</a>: <a href="#type-whereExpr">whereExpr</a> => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-eq" id="value-eq">eq</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-notEq" id="value-notEq">notEq</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-lt" id="value-lt">lt</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-lte" id="value-lte">lte</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-gt" id="value-gt">gt</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-gte" id="value-gte">gte</a>: (~col: string, 'a) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-between" id="value-between">between</a>: (
+  ~col: string,
+  ~bottom: 'a,
+  ~top: 'a
+) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-isNull" id="value-isNull">isNull</a>: string => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-isNotNull" id="value-isNotNull">isNotNull</a>: string => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-like" id="value-like">like</a>: (~col: string, string) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-exists" id="value-exists">exists</a>: (~subquery: <a href="#type-builder">builder</a>) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-in_" id="value-in_">in_</a>: (~col: string, array('a)) => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-isNot" id="value-isNot">isNot</a>: <a href="#type-whereExpr">whereExpr</a> => <a href="#type-whereExpr">whereExpr</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-insertBuilder" id="type-insertBuilder">insertBuilder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-insertInto" id="value-insertInto">insertInto</a>: string => <a href="#type-insertBuilder">insertBuilder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-values" id="value-values">values</a>: (<a href="#type-insertBuilder">insertBuilder</a>, array(Js.t('a))) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-valuesJson" id="value-valuesJson">valuesJson</a>: (<a href="#type-insertBuilder">insertBuilder</a>, array(Js.Json.t)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-value" id="value-value">value</a>: (<a href="#type-insertBuilder">insertBuilder</a>, Js.t('a)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-valueJson" id="value-valueJson">valueJson</a>: (<a href="#type-insertBuilder">insertBuilder</a>, Js.Json.t) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-jsonValue" id="value-jsonValue">jsonValue</a>: (<a href="#type-insertBuilder">insertBuilder</a>, Js.Json.t) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-jsonValues" id="value-jsonValues">jsonValues</a>: (<a href="#type-insertBuilder">insertBuilder</a>, array(Js.Json.t)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-update" id="value-update">update</a>: (~table: string, Js.t('a)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-updateJson" id="value-updateJson">updateJson</a>: (~table: string, Js.Json.t) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-delete" id="value-delete">delete</a>: unit => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-select" id="value-select">select</a>: string => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-distinct" id="value-distinct">distinct</a>: (<a href="#type-builder">builder</a>, ~cols: array(string)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-andSelect" id="value-andSelect">andSelect</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-offset" id="value-offset">offset</a>: (<a href="#type-builder">builder</a>, int) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-limit" id="value-limit">limit</a>: (<a href="#type-builder">builder</a>, int) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-into" id="value-into">into</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-intoTemp" id="value-intoTemp">intoTemp</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-from" id="value-from">from</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-join" id="value-join">join</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-leftJoin" id="value-leftJoin">leftJoin</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-rightJoin" id="value-rightJoin">rightJoin</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-fullJoin" id="value-fullJoin">fullJoin</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-crossJoin" id="value-crossJoin">crossJoin</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-on" id="value-on">on</a>: (<a href="#type-builder">builder</a>, Js.t('a)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-whereEq" id="value-whereEq">whereEq</a>: (<a href="#type-builder">builder</a>, string, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-whereAll" id="value-whereAll">whereAll</a>: (<a href="#type-builder">builder</a>, Js.t('a)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-where" id="value-where">where</a>: (<a href="#type-builder">builder</a>, <a href="#type-whereExpr">whereExpr</a>) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-groupByOne" id="value-groupByOne">groupByOne</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-groupBy" id="value-groupBy">groupBy</a>: (<a href="#type-builder">builder</a>, array(string)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-having" id="value-having">having</a>: (<a href="#type-builder">builder</a>, ~column: string, 'a) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-orderByOne" id="value-orderByOne">orderByOne</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-orderBy" id="value-orderBy">orderBy</a>: (<a href="#type-builder">builder</a>, array(string)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-forUpdate" id="value-forUpdate">forUpdate</a>: (<a href="#type-builder">builder</a>, unit) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-set" id="value-set">set</a>: (<a href="#type-builder">builder</a>, ~column: string, 'a) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-whereOpt" id="value-whereOpt">whereOpt</a>: (<a href="#type-builder">builder</a>, option(<a href="#type-whereExpr">whereExpr</a>)) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-onConflictBuilder" id="type-onConflictBuilder">onConflictBuilder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-onConflict2" id="value-onConflict2">onConflict2</a>: (
+  <a href="#type-builder">builder</a>,
+  string,
+  string
+) => <a href="#type-onConflictBuilder">onConflictBuilder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-onConflict" id="value-onConflict">onConflict</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-onConflictBuilder">onConflictBuilder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-doUpdate" id="value-doUpdate">doUpdate</a>: <a href="#type-onConflictBuilder">onConflictBuilder</a> => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-doNothing" id="value-doNothing">doNothing</a>: <a href="#type-onConflictBuilder">onConflictBuilder</a> => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-doUpdateOne" id="value-doUpdateOne">doUpdateOne</a>: (<a href="#type-onConflictBuilder">onConflictBuilder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-returning" id="value-returning">returning</a>: (<a href="#type-builder">builder</a>, string) => <a href="#type-builder">builder</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-toPayload" id="value-toPayload">toPayload</a>: <a href="#type-builder">builder</a> => <a href="Pg.html#type-queryPayload" title="Pg.queryPayload">queryPayload</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-toString" id="value-toString">toString</a>: <a href="#type-builder">builder</a> => string</h4>
+
+<div class='body body-empty'></div></div>
+
+    </div>
+    <div class='right-blank'></div>
+    </div>
+  

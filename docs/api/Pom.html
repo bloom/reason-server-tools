@@ -1,0 +1,262 @@
+
+    
+<!doctype html>
+<meta charset=utf8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href='../styles.css'>
+<script defer src='../script.js'></script>
+<title>Pom</title>
+<body>
+<script>window.relativeToRoot=".."</script>
+<script defer src="../block-script.js"></script>
+<div id='error-message'>
+  ⚠️ Oops! This page doesn't appear to define a <span>type</span> called <code>_</code>.
+</div>
+
+    <script>window.shouldCheckHashes=true</script>
+    <div class='container'>
+    
+    <div class='sidebar-wrapper'>
+    <div class='sidebar-expander'>Show navigation</div>
+    <div class='sidebar'>
+      <a href="../search.html" style="display: block; padding: 0 8px;">Search</a>
+      
+      <div class='docs-listing'><a href="../index.html">Home</a></div>
+      <div class='toc-header'>Page Contents</div>
+      <div class='table-of-contents'>
+      <a href="#Pom" class='level-1 header'>Pom</a>
+<a href="#type-pomWithError" class='level-2 type'>pomWithError</a>
+<a href="#type-pom" class='level-2 type'>pom</a>
+<a href="#value-make" class='level-2 value'>make</a>
+<a href="#type-nodeCallback" class='level-2 type'>nodeCallback</a>
+<a href="#value-fromCallback" class='level-2 value'>fromCallback</a>
+<a href="#value-resolved" class='level-2 value'>resolved</a>
+<a href="#value-rejected" class='level-2 value'>rejected</a>
+<a href="#value-map" class='level-2 value'>map</a>
+<a href="#value-<$>" class='level-2 value'><$></a>
+<a href="#value-flatMap" class='level-2 value'>flatMap</a>
+<a href="#value->>=" class='level-2 value'>>>=</a>
+<a href="#value-wait" class='level-2 value'>wait</a>
+<a href="#value-try_" class='level-2 value'>try_</a>
+<a href="#value-<?>" class='level-2 value'><?></a>
+<a href="#value-tap" class='level-2 value'>tap</a>
+<a href="#value->->" class='level-2 value'>>-></a>
+<a href="#value-mapErr" class='level-2 value'>mapErr</a>
+<a href="#value-<!>" class='level-2 value'><!></a>
+<a href="#value-recover" class='level-2 value'>recover</a>
+<a href="#value-mergeErr" class='level-2 value'>mergeErr</a>
+<a href="#value-flatMapFromError" class='level-2 value'>flatMapFromError</a>
+<a href="#value-!>=" class='level-2 value'>!>=</a>
+<a href="#value-all" class='level-2 value'>all</a>
+<a href="#value-allArray" class='level-2 value'>allArray</a>
+<a href="#value-fromJsPromise" class='level-2 value'>fromJsPromise</a>
+<a href="#value-toJsPromise" class='level-2 value'>toJsPromise</a>
+<a href="#value-let_" class='level-2 value'>let_</a>
+      </div>
+      <div class='project-title'>Package modules</div><div class='project-listing'><a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a>
+<a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a></div>
+    </div>
+    </div>
+  
+    <div class='main'>
+    
+    <a href="#Pom" id="Pom"><h1>Pom</h1></a>
+
+<p>Poms are richer alternatives to promises that make error handling
+required and explicit. They aren&#39;t much more than the combination
+of JS promises and Reason Results. The value lies in the functions
+provided for easy control flow.</p>
+<p>Hopefully more docs later!</p>
+<div class='doc-item'><h4 class='item'>type <a href="#type-pomWithError" id="type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-pom" id="type-pom">pom</a>('data) = <a href="#type-pomWithError">pomWithError</a>('data, unit)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-make" id="value-make">make</a>: unit => (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'b),
+  'a => unit,
+  'b => unit
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>type <a href="#type-nodeCallback" id="type-nodeCallback">nodeCallback</a>('err, 'data) = ('err, 'data) => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-fromCallback" id="value-fromCallback">fromCallback</a>: <a href="#type-nodeCallback">nodeCallback</a>(
+  'err,
+  'data
+) => unit => <a href="#type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-resolved" id="value-resolved">resolved</a>: 'a => <a href="#type-pomWithError">pomWithError</a>('a, 'b)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-rejected" id="value-rejected">rejected</a>: 'a => <a href="#type-pomWithError">pomWithError</a>('b, 'a)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-map" id="value-map">map</a>: (<a href="#type-pomWithError">pomWithError</a>('a, 'err), 'a => 'b) => <a href="#type-pomWithError">pomWithError</a>(
+  'b,
+  'err
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-<$>" id="value-<$>"><$></a>: (<a href="#type-pomWithError">pomWithError</a>('a, 'b), 'a => 'c) => <a href="#type-pomWithError">pomWithError</a>(
+  'c,
+  'b
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-flatMap" id="value-flatMap">flatMap</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'err),
+  'a => <a href="#type-pomWithError">pomWithError</a>('b, 'err)
+) => <a href="#type-pomWithError">pomWithError</a>('b, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value->>=" id="value->>=">>>=</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'b),
+  'a => <a href="#type-pomWithError">pomWithError</a>('c, 'b)
+) => <a href="#type-pomWithError">pomWithError</a>('c, 'b)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-wait" id="value-wait">wait</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  Belt.Result.t('data, 'err) => unit
+) => <a href="#type-pom">pom</a>(unit)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-try_" id="value-try_">try_</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'err),
+  'a => Belt.Result.t('b, 'err)
+) => <a href="#type-pomWithError">pomWithError</a>('b, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-<?>" id="value-<?>"><?></a>: (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'err),
+  'a => Belt.Result.t('b, 'err)
+) => <a href="#type-pomWithError">pomWithError</a>('b, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-tap" id="value-tap">tap</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'data => unit
+) => <a href="#type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value->->" id="value->->">>-></a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'data => unit
+) => <a href="#type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-mapErr" id="value-mapErr">mapErr</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'err => 'err2
+) => <a href="#type-pomWithError">pomWithError</a>('data, 'err2)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-<!>" id="value-<!>"><!></a>: (<a href="#type-pomWithError">pomWithError</a>('a, 'b), 'b => 'c) => <a href="#type-pomWithError">pomWithError</a>(
+  'a,
+  'c
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-recover" id="value-recover">recover</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'err => 'data
+) => <a href="#type-pom">pom</a>('data)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-mergeErr" id="value-mergeErr">mergeErr</a>: <a href="#type-pomWithError">pomWithError</a>('a, 'a) => <a href="#type-pom">pom</a>('a)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-flatMapFromError" id="value-flatMapFromError">flatMapFromError</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'err => <a href="#type-pomWithError">pomWithError</a>('data, 'err)
+) => <a href="#type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-!>=" id="value-!>=">!>=</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('data, 'err),
+  'err => <a href="#type-pomWithError">pomWithError</a>('data, 'err)
+) => <a href="#type-pomWithError">pomWithError</a>('data, 'err)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-all" id="value-all">all</a>: list(<a href="#type-pom">pom</a>('a)) => <a href="#type-pom">pom</a>(list('a))</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-allArray" id="value-allArray">allArray</a>: array(<a href="#type-pom">pom</a>('a)) => <a href="#type-pom">pom</a>(array('a))</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-fromJsPromise" id="value-fromJsPromise">fromJsPromise</a>: Js.Promise.t('a) => <a href="#type-pomWithError">pomWithError</a>(
+  'a,
+  Js.Promise.error
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-toJsPromise" id="value-toJsPromise">toJsPromise</a>: <a href="#type-pom">pom</a>('a) => Js.Promise.t('a)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-let_" id="value-let_">let_</a>: (
+  <a href="#type-pomWithError">pomWithError</a>('a, 'b),
+  'a => <a href="#type-pomWithError">pomWithError</a>('c, 'b)
+) => <a href="#type-pomWithError">pomWithError</a>('c, 'b)</h4>
+
+<div class='body body-empty'></div></div>
+
+    </div>
+    <div class='right-blank'></div>
+    </div>
+  

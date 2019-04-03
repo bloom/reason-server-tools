@@ -1,0 +1,139 @@
+
+    
+<!doctype html>
+<meta charset=utf8>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel=stylesheet href='../styles.css'>
+<script defer src='../script.js'></script>
+<title>DB</title>
+<body>
+<script>window.relativeToRoot=".."</script>
+<script defer src="../block-script.js"></script>
+<div id='error-message'>
+  ⚠️ Oops! This page doesn't appear to define a <span>type</span> called <code>_</code>.
+</div>
+
+    <script>window.shouldCheckHashes=true</script>
+    <div class='container'>
+    
+    <div class='sidebar-wrapper'>
+    <div class='sidebar-expander'>Show navigation</div>
+    <div class='sidebar'>
+      <a href="../search.html" style="display: block; padding: 0 8px;">Search</a>
+      
+      <div class='docs-listing'><a href="../index.html">Home</a></div>
+      <div class='toc-header'>Page Contents</div>
+      <div class='table-of-contents'>
+      <a href="#DB" class='level-1 header'>DB</a>
+<a href="#module-Abstract" class='level-2 module'>Abstract</a>
+<a href="#value-Abstract.perform" class='level-3 value'>perform</a>
+<a href="#value-Abstract.performRaw" class='level-3 value'>performRaw</a>
+<a href="#value-pool" class='level-2 value'>pool</a>
+<a href="#value-connect" class='level-2 value'>connect</a>
+<a href="#value-getPool" class='level-2 value'>getPool</a>
+<a href="#value-perform" class='level-2 value'>perform</a>
+<a href="#value-performRaw" class='level-2 value'>performRaw</a>
+      </div>
+      <div class='project-title'>Package modules</div><div class='project-listing'><a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a>
+<a href="Bricks.html">Bricks</a>
+<a href="ConfigTools.html">ConfigTools</a>
+<a href="Cuid.html">Cuid</a>
+<a href="DB.html">DB</a>
+<a href="DateExt.html">DateExt</a>
+<a href="DecodeExt.html">DecodeExt</a>
+<a href="ExpressExt.html">ExpressExt</a>
+<a href="Handler.html">Handler</a>
+<a href="Hashes.html">Hashes</a>
+<a href="Log.html">Log</a>
+<a href="Pg.html">Pg</a>
+<a href="Pom.html">Pom</a>
+<a href="Postgrator.html">Postgrator</a>
+<a href="Request.html">Request</a></div>
+    </div>
+    </div>
+  
+    <div class='main'>
+    
+    <a href="#DB" id="DB"><h1>DB</h1></a>
+
+<p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item module'>module <a href="#module-Abstract" id="module-Abstract">Abstract</a></h4><div class='body module-body'><p><span class='missing'>This module does not have a toplevel documentation block.</span></p>
+<div class='doc-item'><h4 class='item'>let <a href="#value-Abstract.perform" id="value-Abstract.perform">perform</a>: (<a href="Pg.html#type-pool" title="Pg.pool">pool</a>, <a href="Bricks.html#type-builder" title="Bricks.builder">builder</a>) => <a href="Pom.html#type-pomWithError" title="Pom.pomWithError">pomWithError</a>(
+  Js.Json.t,
+  Js.Promise.error
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-Abstract.performRaw" id="value-Abstract.performRaw">performRaw</a>: (
+  <a href="Pg.html#type-pool" title="Pg.pool">pool</a>,
+  ~?values: option(
+    [ `Eight of 'b1 * 'c1 * 'd1 * 'e1 * 'f1 * 'g1 * 'h1 * 'i1
+| `Five of 'b1 * 'c1 * 'd1 * 'e1 * 'f1
+| `Four of 'b1 * 'c1 * 'd1 * 'e1
+| `Nine of 'b1 * 'c1 * 'd1 * 'e1 * 'f1 * 'g1 * 'h1 * 'i1 * 'j1
+| `One of 'b1
+| `Seven of 'b1 * 'c1 * 'd1 * 'e1 * 'f1 * 'g1 * 'h1
+| `Six of 'b1 * 'c1 * 'd1 * 'e1 * 'f1 * 'g1
+| `Three of 'b1 * 'c1 * 'd1
+| `Two of 'b1 * 'c1 ]
+  ),
+  string
+) => <a href="Pom.html#type-pomWithError" title="Pom.pomWithError">pomWithError</a>(Js.Json.t, Js.Promise.error)</h4>
+
+<div class='body body-empty'></div></div>
+</div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-pool" id="value-pool">pool</a>: Pervasives.ref(option(<a href="Pg.html#type-pool" title="Pg.pool">pool</a>))</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-connect" id="value-connect">connect</a>: string => unit</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-getPool" id="value-getPool">getPool</a>: unit => <a href="Pg.html#type-pool" title="Pg.pool">pool</a></h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-perform" id="value-perform">perform</a>: <a href="Bricks.html#type-builder" title="Bricks.builder">builder</a> => <a href="Pom.html#type-pomWithError" title="Pom.pomWithError">pomWithError</a>(
+  Js.Json.t,
+  Js.Promise.error
+)</h4>
+
+<div class='body body-empty'></div></div>
+
+<div class='doc-item'><h4 class='item'>let <a href="#value-performRaw" id="value-performRaw">performRaw</a>: (
+  ~?values: option(
+    [ `Eight of 'k1 * 'l1 * 'm1 * 'n1 * 'o1 * 'p1 * 'q1 * 'r1
+| `Five of 'k1 * 'l1 * 'm1 * 'n1 * 'o1
+| `Four of 'k1 * 'l1 * 'm1 * 'n1
+| `Nine of 'k1 * 'l1 * 'm1 * 'n1 * 'o1 * 'p1 * 'q1 * 'r1 * 's1
+| `One of 'k1
+| `Seven of 'k1 * 'l1 * 'm1 * 'n1 * 'o1 * 'p1 * 'q1
+| `Six of 'k1 * 'l1 * 'm1 * 'n1 * 'o1 * 'p1
+| `Three of 'k1 * 'l1 * 'm1
+| `Two of 'k1 * 'l1 ]
+  ),
+  string
+) => <a href="Pom.html#type-pomWithError" title="Pom.pomWithError">pomWithError</a>(Js.Json.t, Js.Promise.error)</h4>
+
+<div class='body body-empty'></div></div>
+
+    </div>
+    <div class='right-blank'></div>
+    </div>
+  

@@ -1,0 +1,19 @@
+{
+  "name": "reason-server-tools",
+  "version": "1.0.0",
+  "description": "``` npm start ```",
+  "main": "index.js",
+  "dependencies": {
+    "@glennsl/bs-json": "^3.0.0",
+    "bs-express": "^0.11.1"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

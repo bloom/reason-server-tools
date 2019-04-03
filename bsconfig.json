@@ -1,0 +1,17 @@
+{
+  "name": "reason-server-tools",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": ["@glennsl/bs-json", "bs-express"],
+  "bsc-flags": ["-bs-g"],
+  "refmt": 3
+}
