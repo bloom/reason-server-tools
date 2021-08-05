@@ -12,6 +12,5 @@
   },
   "suffix": ".bs.js",
   "bs-dependencies": ["@glennsl/bs-json", "bs-express"],
-  "bsc-flags": ["-bs-g"],
-  "refmt": 3
+  "bsc-flags": ["-bs-g"]
 }

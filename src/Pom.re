@@ -34,7 +34,9 @@ let make = () => {
 
 let makeWithCallback = () => {
   let (p, resolve) = JsPromise.make();
-  let isFalsy: 'x => bool = [%bs.raw a => {| return a ? true : false|}];
+  let isFalsy: 'x => bool = [%bs.raw
+    {js| function(a){return a ? true : false}|js}
+  ];
   let callback = (err: 'e, result: 'a) =>
     /* The convention with Node or JS callbacks is to
        check an error like this:

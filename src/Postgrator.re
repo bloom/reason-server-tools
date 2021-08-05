@@ -13,7 +13,7 @@ external make:
   "postgrator";
 
 type appliedMigration;
-[@bs.send] external migrate: t => Js.Promise.t(array(appliedMigration)) = "";
+[@bs.send] external migrate: t => Js.Promise.t(array(appliedMigration)) = "migrate";
 
 %bs.raw
 {|
