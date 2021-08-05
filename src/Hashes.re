@@ -54,4 +54,4 @@ let md5OfString = (b: string): string => {
 
 [@bs.send.pipe: Node.buffer] external toString: string => string = "";
 
-let randomId = () => randomBytes(16) |> toString("hex") |> String.uppercase;
+let randomId = () => randomBytes(16) |> toString("hex") |> String.uppercase_ascii;
