@@ -1,10 +1,10 @@
 module Hash = {
   type hash;
-  [@bs.module "crypto"] external createHash: string => hash = "";
-  [@bs.send] external update: (hash, Node.Buffer.t) => unit = "";
+  [@bs.module "crypto"] external createHash: string => hash = "createHash";
+  [@bs.send] external update: (hash, Node.Buffer.t) => unit = "update";
   /* updateWithString: The string is assumed to be a UTF-8 string */
   [@bs.send] external updateWithString: (hash, string) => unit = "update";
-  [@bs.send] external digest: (hash, string) => string = "";
+  [@bs.send] external digest: (hash, string) => string = "digest";
 };
 
 module LegacyMd5 = {
@@ -50,8 +50,8 @@ let md5OfString = (b: string): string => {
   hash->digest("hex");
 };
 
-[@bs.module "crypto"] external randomBytes: int => Node.buffer = "";
+[@bs.module "crypto"] external randomBytes: int => Node.buffer = "randomBytes";
 
-[@bs.send.pipe: Node.buffer] external toString: string => string = "";
+[@bs.send.pipe: Node.buffer] external toString: string => string = "toString";
 
 let randomId = () => randomBytes(16) |> toString("hex") |> String.uppercase_ascii;

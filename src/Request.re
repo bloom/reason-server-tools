@@ -34,18 +34,18 @@ type error = {
   message: string,
 };
 
-[@bs.module "superagent"] external get: string => request = "";
-[@bs.module "superagent"] external post: string => request = "";
+[@bs.module "superagent"] external get: string => request = "get";
+[@bs.module "superagent"] external post: string => request = "post";
 [@bs.module "superagent"]
 external postJson: (string, Js.Json.t) => request = "post";
 external postBuffer: (string, Node.Buffer.t) => request = "post";
-[@bs.module "superagent"] external put: string => request = "";
+[@bs.module "superagent"] external put: string => request = "put";
 [@bs.module "superagent"]
 external putJson: (string, Js.Json.t) => request = "put";
 [@bs.module "superagent"]
 external putBuffer: (string, Node.Buffer.t) => request = "put";
-[@bs.module "superagent"] external delete: string => request = "";
-[@bs.send] external retry: (request, int) => request = "";
+[@bs.module "superagent"] external delete: string => request = "delete";
+[@bs.send] external retry: (request, int) => request = "retry";
 
 /* Attaches binary data as the body of the request. */
 [@bs.send] external sendBuffer: (request, Node.Buffer.t) => request = "send";
@@ -90,14 +90,14 @@ let attachJsonAsFile =
   );
 
 /* Set a header on the request */
-[@bs.send] external set: (request, string, string) => request = "";
+[@bs.send] external set: (request, string, string) => request = "set";
 /* Use this to modify which kinds of responses count as errors. By default, all non-200 responses
    get treated as errors, and show up on the error side of the pom. */
-[@bs.send] external ok: (request, response => bool) => request = "";
+[@bs.send] external ok: (request, response => bool) => request = "ok";
 
 /* Supports basic auth */
 [@bs.send]
-external auth: (request, ~username: string, ~password: string) => request = "";
+external auth: (request, ~username: string, ~password: string) => request = "auth";
 
 /* "response" sets the amount of time the client will wait for the first byte of the request before abortind. "deadline" sets the total time allowed for the entire request to finish. */
 [@bs.send]
@@ -111,7 +111,7 @@ external timeout:
     }
   ) =>
   request =
-  "";
+  "timeout";
 
 let toPromise = (r: request): Pom.pomWithError(response, error) =>
   /* The request object implements Promise. So we can just magic it. */

@@ -13,9 +13,9 @@ type dbResult = {. "rows": Js.Json.t};
 module Types = {
   type t;
 
-  [@bs.val] external parseInt: string => int = "";
-  [@bs.module "pg"] external types: t = "";
-  [@bs.send] external setTypeParser: (t, int, string => 'a) => unit = "";
+  [@bs.val] external parseInt: string => int = "parseInt";
+  [@bs.module "pg"] external types: t = "types";
+  [@bs.send] external setTypeParser: (t, int, string => 'a) => unit = "setTypeParser";
   [@bs.send]
   external setTypeParserD: (t, int, Js.Date.t => 'a) => unit = "setTypeParser";
 
